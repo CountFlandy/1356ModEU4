@@ -82,9 +82,6 @@ country_decisions = {
 			factor = 100
 		}
 	}
-
-#Needs to be more difficult to get
-
 	boost_mercantilism_growth_duccats_decision = { #Decision to allow Nations with lots of money to embrace the Mercantilism faster
 		major = yes
 		potential = {
@@ -181,7 +178,7 @@ country_decisions = {
 				#Did I miss any?
 			}
 			NOT = { has_institution = gunpowder_institution }
-			#has_country_modifier = pre_gunpowder_modifier
+			is_year = 1399
 			NOT = { is_year = 1450 }
 		}
 		allow = {
@@ -196,11 +193,13 @@ country_decisions = {
 				
 			}
 			NOT = { has_institution = gunpowder_institution }
-			#has_country_modifier = pre_gunpowder_modifier
 			NOT = { is_year = 1450 }
 			OR = {
 				mil_tech = 7
-				mil = 5
+				AND = {
+					mil = 6
+					mil_tech = 5
+				}
 			}
 			
 		}
@@ -213,7 +212,6 @@ country_decisions = {
 				name = mongol_gunpowder_tech_modifier
 				duration = 3650  
 			}
-			#remove_country_modifier = pre_gunpowder_modifier
 		}
 		ai_will_do = { 
 			factor = 1
@@ -225,19 +223,14 @@ country_decisions = {
 			culture_group = east_asian
 			NOT = { tag = YUA } #We dont need Yuan getting both now...
 			NOT = { has_institution = gunpowder_institution }
-			has_country_modifier = pre_gunpowder_modifier
-			is_year = 1360
+			is_year = 1399
 			NOT = { is_year = 1450 }
 		}
 		allow = {
 			culture_group = east_asian
 			NOT = { has_institution = gunpowder_institution }
-			has_country_modifier = pre_gunpowder_modifier
 			NOT = { is_year = 1450 }
-			OR = {
-				mil = 5
-				mil_tech = 7
-			}
+			mil_tech = 7
 			
 		}
 		effect = {
@@ -249,7 +242,6 @@ country_decisions = {
 				name = gunpowder_tech_modifier
 				duration = 3650  
 			}
-			remove_country_modifier = pre_gunpowder_modifier
 		}
 		ai_will_do = { 
 			factor = 1
@@ -260,19 +252,15 @@ country_decisions = {
 		potential = {
 			culture_group = byzantine
 			NOT = { has_institution = gunpowder_institution }
-			has_country_modifier = pre_gunpowder_modifier
+			is_year = 1399
 			NOT = { is_year = 1450 }
 		}
 		allow = {
 			culture_group = byzantine
 			owns = 151 #Constantinople
 			NOT = { has_institution = gunpowder_institution }
-			has_country_modifier = pre_gunpowder_modifier
 			NOT = { is_year = 1450 }
-			OR = {
-				mil = 5
-				mil_tech = 7
-			}
+			mil_tech = 7
 			
 		}
 		effect = {
@@ -284,7 +272,6 @@ country_decisions = {
 				name = gunpowder_tech_modifier
 				duration = 3650  
 			}
-			remove_country_modifier = pre_gunpowder_modifier
 		}
 		ai_will_do = { 
 			factor = 1
@@ -295,19 +282,14 @@ country_decisions = {
 		potential = {
 			culture = korean
 			NOT = { has_institution = gunpowder_institution }
-			has_country_modifier = pre_gunpowder_modifier
 			is_year = 1399
 			NOT = { is_year = 1450 }
 		}
 		allow = {
 			culture = korean
 			NOT = { has_institution = gunpowder_institution }
-			has_country_modifier = pre_gunpowder_modifier
 			NOT = { is_year = 1450 }
-			OR = {
-				mil_tech = 7
-				mil = 5
-			}
+			mil_tech = 7
 			
 		}
 		effect = {
@@ -319,7 +301,6 @@ country_decisions = {
 				name = gunpowder_tech_modifier
 				duration = 3650  
 			}
-			remove_country_modifier = pre_gunpowder_modifier
 		}
 		ai_will_do = { 
 			factor = 1
@@ -356,86 +337,55 @@ country_decisions = {
 		# }
 
 	tributary_overlord_gunpowder_decision = { #Decision to allow the overlord of a tributary subject to receive unique bonuses towards gunpowder
-		#major = yes
+		major = yes
 		potential = {
 			tributary_state = 1
 			has_institution = gunpowder_institution
+			is_year = 1399
 			NOT = { is_year = 1450 }
 		}
 		allow = {
 			tributary_state = 1
 			has_institution = gunpowder_institution
 			NOT = { is_year = 1450 }
-			OR = {
-				mil_tech = 7
-				mil = 5
-			}
+			mil_tech = 7
+			
 		}
 		effect = {
 			add_country_modifier = { 
 				name = gunpowder_tech_modifier
 				duration = 3650  
 			}
-			set_country_flag = overlord_gunpowder_modifier
 		}
 		ai_will_do = { 
-			factor = 100
+			factor = 1
 		}
 	}
 	tributary_subject_gunpowder_decision = { #Decision to allow tributary subjects of a nation that has embraced gunpowder to get unique bonuses towards gunpowder
-		#major = yes
+		major = yes
 		potential = {
 			is_subject_of_type = tributary_state
 			NOT = { has_institution = gunpowder_institution }
+			is_year = 1399
 			NOT = { is_year = 1450 }
 		}
 		allow = {
 			is_subject_of_type = tributary_state
 			NOT = { has_institution = gunpowder_institution }
 			NOT = { is_year = 1450 }
-			overlord = { has_country_flag = overlord_gunpowder_modifier }
-			treasury = 100
+			mil_tech = 7
+			
 		}
 		effect = {
-			add_treasury = -100
 			add_country_modifier = { 
 				name = gunpowder_tech_modifier
 				duration = 3650  
 			}
-			remove_country_modifier = pre_gunpowder_modifier
-			overlord = { add_treasury = 100	}
-			set_country_flag = chinese_subject_embraced_gunpowder
 		}
 		ai_will_do = { 
-			factor = 10
+			factor = 1
 		}
 	}
-	tributary_subject_gunpowder_boost_decision = { #Decision to give Chinese Subjects a small boost to arty until 1500'sish
-		#major = yes
-		potential = {
-			is_subject_of_type = tributary_state
-			has_country_flag = chinese_subject_embraced_gunpowder
-			is_year = 1400
-			NOT = { is_year = 1500 }
-		}
-		allow = {
-			is_subject_of_type = tributary_state
-			overlord = { culture_group = east_asian }
-			has_country_flag = chinese_subject_embraced_gunpowder
-			has_institution = gunpowder_institution
-			NOT = { is_year = 1500 }
-			mil_power = 200
-		}
-		effect = {
-			add_mil_power = -200
-			add_country_modifier = { 
-				name = chinese_subject_gunpowder_boost_modifier
-				duration = -1 
-			}
-		}
-		ai_will_do = { 
-			factor = 5
-		}
-	}
-
+	
+	#Another decision for Subjects of the Chinese Emperor
 }

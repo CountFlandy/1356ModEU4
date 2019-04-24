@@ -1,8 +1,6 @@
-# 4254 - Starodub (1356)
-# Changes: NZH
 
-owner = NZH
-controller = NZH
+owner = VLD
+controller = VLD
 culture = russian
 religion = orthodox
 hre = no
@@ -12,8 +10,7 @@ trade_goods = grain
 base_manpower = 2
 capital = "Starodub"
 is_city = yes
-add_core = NZH
-add_core = MOS
+add_core = VLD
 discovered_by = GOL
 discovered_by = KAZ
 discovered_by = eastern

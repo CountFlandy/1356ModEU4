@@ -71,6 +71,30 @@ dependency = {
 	end_date = 1380.9.8
 }
 
+dependency = {
+	subject_type = "tributary_state"
+	first = GLH
+	second = LZH
+	start_date = 1356.12.26 #1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = GLH
+	second = DMT
+	start_date = 1356.12.26 #1355.1.1
+	end_date = 1380.9.8
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = GLH
+	second = VLD
+	start_date = 1356.12.26 #1355.1.1
+	end_date = 1380.9.8
+}
+
 # Lithuania-Tver Connection
 alliance = {
 	first = LIT
@@ -98,13 +122,6 @@ alliance = {
 alliance = {
 	first = MOS
 	second = SMO
-	start_date = 1356.12.26 #1355.1.1
-	end_date = 1380.9.8
-}
-
-alliance = {
-	first = MOS
-	second = BLO
 	start_date = 1356.12.26 #1355.1.1
 	end_date = 1380.9.8
 }
@@ -164,8 +181,8 @@ vassal = {
 vassal = {
 	first = MOS
 	second = BLO
-	start_date = 1389.1.1
-	end_date = 1444.1.1
+	start_date = 1330.1.1
+	end_date = 1389.1.1
 }
 
 # Novgorod vassal - Great Perm

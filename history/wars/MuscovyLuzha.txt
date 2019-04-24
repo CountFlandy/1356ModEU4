@@ -1,0 +1,12 @@
+name = "Muscovian conquest of Luzha"
+casus_belli = cb_conquest
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 296 # Kaluga
+}
+
+1356.1.1 = {
+	add_attacker = MOS
+	add_defender = LZH
+}

@@ -139,68 +139,43 @@ country_event = { #Removes Chinese Subject Gunpowder after gunpowder
 	}
 }
 
-
 ####################
 ####Mercantilism####
 ####################
 
-# country_event = { #Boosts Mercantilism in nations with trade income %
-	# id = new_institution_events.20
-	# title = new_institution_events.20.t
-	# desc = new_institution_events.20.d
+country_event = { #Boosts Mercantilism in nations with trade income %
+	id = new_institution_events.20
+	title = new_institution_events.20.t
+	desc = new_institution_events.20.d
 	
-	# picture = MERCHANTS_TALKING_eventPicture
+	picture = MERCHANTS_TALKING_eventPicture
 	
-	# trigger = {
-		# NOT = { has_institution = mercantilism_institution }
-		# trade_income_percentage = 0.50 #Whats a fair ratio early game?
-		# NOT = { is_year = 1430 }
-	# }
-	# mean_time_to_happen = {	
-		# months = 24
-	# }
-	# option = {
-		# name = new_institution_events.20.a
-		# random_owned_province = {
-			# if = {
-				# NOT = { mercantilism_institution = 100}
-				# owner = { NOT = { has_institution = mercantilism_institution } }
-			# }
-			# add_institution_embracement = {
-				# which = mercantilism_institution
-				# value = 50
-			# }
-		# }
+	trigger = {
+		NOT = { has_institution = mercantilism_institution }
+		trade_income_percentage = 0.50 #Whats a fair ratio early game?
+		NOT = { is_year = 1430 }
+	}
+	mean_time_to_happen = {	
+		months = 24
+	}
+	option = {
+		name = new_institution_events.20.a
+		random_owned_province = {
+			if = {
+				NOT = { mercantilism_institution = 100}
+				owner = { NOT = { has_institution = mercantilism_institution } }
+			}
+			add_institution_embracement = {
+				which = mercantilism_institution
+				value = 50
+			}
+		}
 		
-	# }
-# }
+	}
+}
 
 
 #################
 ####Gunpowder####
 #################
 
-country_event = { #First to reach gunpowder
-	id = new_institution_events.60
-	title = new_institution_events.60.t
-	desc = new_institution_events.60.d
-	
-	picture = LAND_MILITARY_eventPicture
-	fire_only_once = yes
-	major = yes
-	
-	trigger = {
-		is_year = 1400
-		has_institution = gunpowder_institution
-		mil_tech = 4 #Hand Cannon
-	}
-	mean_time_to_happen = {	
-		days = 1
-	}
-	option = {
-		name = new_institution_events.60.a
-		mil_power = 200
-		add_army_tradition = 15
-		add_navy_tradition = 15
-	}
-}

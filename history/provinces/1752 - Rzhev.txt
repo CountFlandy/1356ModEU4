@@ -1,8 +1,5 @@
-# 1752 - Rzhev (1356)
-# Changes: TVE/NOV/MOS/LIT
-
-owner = TVE
-controller = TVE
+owner = LIT
+controller = LIT
 culture = russian
 religion = orthodox
 hre = no
@@ -14,7 +11,7 @@ base_manpower = 3
 capital = "Rzhev"
 estate = estate_nobles
 is_city = yes
-add_core = TVE
+add_core = LIT
 
 discovered_by = eastern
 discovered_by = western

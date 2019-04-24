@@ -2934,20 +2934,20 @@ hebridean_monarchy = {
 
 muscovite_monarchy = {
 	rank = {
-		1 = GRAND_PRINCIPALITY
+		1 = PRINCIPALITY
 		2 = GRAND_PRINCIPALITY
 		3 = TSARDOM
 	}
 
 	ruler_male = {
-		1 = GREAT_KNIAZ
-		2 = GREAT_KNIAZ
+		1 = KNYAZ
+		2 = VELIKIJ_KNYAZ
 		3 = TSAR
 	}
 
 	ruler_female = {
-		1 = GREAT_KNIAGINIA
-		2 = GREAT_KNIAGINIA
+		1 = KNYAGINYA
+		2 = VELIKAYA_KNYAGINYA
 		3 = TSARITSA
 	}
 
@@ -2970,14 +2970,14 @@ russian_monarchy = {
 	}
 
 	ruler_male = {
-		1 = KNIAZ
-		2 = GREAT_KNIAZ
+		1 = KNYAZ
+		2 = VELIKIJ_KNYAZ
 		3 = TSAR
 	}
 
 	ruler_female = {
-		1 = KNIAGINIA
-		2 = GREAT_KNIAGINIA
+		1 = KNYAGINYA
+		2 = VELIKAYA_KNYAGINYA
 		3 = TSARITSA
 	}
 
@@ -2999,14 +2999,14 @@ russian_feudal_monarchy = {
 	}
 
 	ruler_male = {
-		1 = KNIAZ
-		2 = GREAT_KNIAZ
+		1 = KNYAZ
+		2 = VELIKIJ_KNYAZ
 		3 = EMPEROR
 	}
 
 	ruler_female = {
-		1 = KNIAGINIA
-		2 = GREAT_KNIAGINIA
+		1 = KNYAGINYA
+		2 = VELIKAYA_KNYAGINYA
 		3 = EMPRESS
 	}
 
@@ -3430,15 +3430,15 @@ russian_republic = {
 	}
 
 	ruler_male = {
-		1 = KNIAZ
-		2 = GRAND_KNIAZ
-		3 = GREAT_KNIAZ
+		1 = KNYAZ
+		2 = VELIKIJ_KNYAZ
+		3 = VELIKIJ_KNYAZ
 	}
 
 	ruler_female = {
-		1 = KNIAGINIA
-		2 = GRAND_KNIAGINIA
-		3 = GREAT_KNIAGINIA
+		1 = KNYAGINYA
+		2 = VELIKAYA_KNYAGINYA
+		3 = VELIKAYA_KNYAGINYA
 	}
 
 	trigger = {

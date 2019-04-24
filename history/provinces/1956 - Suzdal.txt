@@ -1,8 +1,5 @@
-# 1956 - Suzdal (1356)
-# Changes: NZH
-
-owner = NZH
-controller = NZH
+owner = VLD
+controller = VLD
 culture = russian
 religion = orthodox
 hre = no
@@ -13,8 +10,7 @@ base_manpower = 3
 capital = "Suzdal"
 estate = estate_nobles
 is_city = yes
-add_core = NZH
-add_core = MOS
+add_core = VLD
 
 discovered_by = GOL
 discovered_by = KAZ

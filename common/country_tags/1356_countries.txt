@@ -68,6 +68,9 @@ WOO = "countries/Wallonia.txt"
 GLY = "countries/Galich.txt"
 MRM = "countries/Murom.txt"
 ING = "countries/Ingria.txt"
+LZH = "countries/Luzha.txt"
+DMT = "countries/Dmitrov.txt"
+VLD = "countries/Vladimir.txt"
 
 #Arabia	
 
